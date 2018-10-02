@@ -1,0 +1,288 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>db_fUser module &mdash; Incident Management SW 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Incident Management SW 1.0 documentation" href="../index.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="../index.html">Incident Management SW 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-db_fUser">
+<span id="db-fuser-module"></span><h1>db_fUser module<a class="headerlink" href="#module-db_fUser" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="db_fUser.insert_user">
+<code class="descclassname">db_fUser.</code><code class="descname">insert_user</code><span class="sig-paren">(</span><em>name</em>, <em>password</em>, <em>rol</em><span class="sig-paren">)</span><a class="headerlink" href="#db_fUser.insert_user" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inserts user in table.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>name</strong> (<em>String</em>) &#8211; Name of the user in application</li>
+<li><strong>password</strong> (<em>String</em>) &#8211; Password of the user in application</li>
+<li><strong>rol</strong> (<a class="reference internal" href="db_model.html#db_model.Rol" title="db_model.Rol"><em>Rol</em></a>) &#8211; Work of the user</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">User object, or None if IntegrityError</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="db_fUser.get_user">
+<code class="descclassname">db_fUser.</code><code class="descname">get_user</code><span class="sig-paren">(</span><em>username</em><span class="sig-paren">)</span><a class="headerlink" href="#db_fUser.get_user" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves user object from database.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>username</strong> (<em>String</em>) &#8211; Username of the user to retrieve</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">User object, or None if DoesNotExist</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="db_fUser.get_all_registers">
+<code class="descclassname">db_fUser.</code><code class="descname">get_all_registers</code><span class="sig-paren">(</span><em>sort=False</em>, <em>value=None</em><span class="sig-paren">)</span><a class="headerlink" href="#db_fUser.get_all_registers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Obtains all the registers of the User table. Admits a sorting option.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>sort</strong> (<em>Boolean</em>) &#8211; If True, will sort</li>
+<li><strong>value</strong> (<em>String</em>) &#8211; By which field will be the registers sorted (username, work)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">SelectQuery with the registers</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="db_fUser.get_username">
+<code class="descclassname">db_fUser.</code><code class="descname">get_username</code><span class="sig-paren">(</span><em>user</em><span class="sig-paren">)</span><a class="headerlink" href="#db_fUser.get_username" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the name of a user.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>user</strong> (<a class="reference internal" href="db_model.html#db_model.User" title="db_model.User"><em>User</em></a>) &#8211; User object</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">String</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="db_fUser.get_work">
+<code class="descclassname">db_fUser.</code><code class="descname">get_work</code><span class="sig-paren">(</span><em>username</em><span class="sig-paren">)</span><a class="headerlink" href="#db_fUser.get_work" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the work of a user.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>username</strong> (<em>String</em>) &#8211; Username of the user</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Rol object</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="db_fUser.get_tickets_created">
+<code class="descclassname">db_fUser.</code><code class="descname">get_tickets_created</code><span class="sig-paren">(</span><em>user</em><span class="sig-paren">)</span><a class="headerlink" href="#db_fUser.get_tickets_created" title="Permalink to this definition">¶</a></dt>
+<dd><p>Obtains the tickets created by a user.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>user</strong> (<em>User object</em>) &#8211; User whose created tickets are to be retrieved</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">SelectQuery with the tickets created by the user</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="db_fUser.count_tickets_created">
+<code class="descclassname">db_fUser.</code><code class="descname">count_tickets_created</code><span class="sig-paren">(</span><em>user</em><span class="sig-paren">)</span><a class="headerlink" href="#db_fUser.count_tickets_created" title="Permalink to this definition">¶</a></dt>
+<dd><p>Obtains the number of tickets created by a user.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>user</strong> (<em>User object</em>) &#8211; User whose created tickets are to be counted</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Integer with the number of tickets created by the user</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="db_fUser.get_tickets_assigned">
+<code class="descclassname">db_fUser.</code><code class="descname">get_tickets_assigned</code><span class="sig-paren">(</span><em>user</em><span class="sig-paren">)</span><a class="headerlink" href="#db_fUser.get_tickets_assigned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Obtains the tickets assigned to a user.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>user</strong> (<em>User object</em>) &#8211; User whose assigned tickets are to be retrieved</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">SelectQuery with the tickets assigned to the user</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="db_fUser.count_tickets_assigned">
+<code class="descclassname">db_fUser.</code><code class="descname">count_tickets_assigned</code><span class="sig-paren">(</span><em>user</em><span class="sig-paren">)</span><a class="headerlink" href="#db_fUser.count_tickets_assigned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Obtains the number of tickets assigned to a user.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>user</strong> (<em>User object</em>) &#8211; User whose assigned tickets are to be counted</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Integer with the number of tickets assigned to the user</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="db_fUser.check_password">
+<code class="descclassname">db_fUser.</code><code class="descname">check_password</code><span class="sig-paren">(</span><em>username</em>, <em>password</em><span class="sig-paren">)</span><a class="headerlink" href="#db_fUser.check_password" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if the parameteres are of a valid user.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>username</strong> (<em>String</em>) &#8211; Username that is going to be checked</li>
+<li><strong>password</strong> (<em>String</em>) &#8211; Password that is going to be checked</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">True if username and password match, False if it does not match and None if user does not exist</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="db_fUser.print_user">
+<code class="descclassname">db_fUser.</code><code class="descname">print_user</code><span class="sig-paren">(</span><em>user</em><span class="sig-paren">)</span><a class="headerlink" href="#db_fUser.print_user" title="Permalink to this definition">¶</a></dt>
+<dd><p>Debug function. Prints user data (username, password, work, num. assigned tickets).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>user</strong> (<em>User object</em>) &#8211; User whose data will be printed</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/_src/db_fUser.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="../index.html">Incident Management SW 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2015, Oriol Miro.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3b2.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,387 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>db_model module &mdash; Incident Management SW 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Incident Management SW 1.0 documentation" href="../index.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="../index.html">Incident Management SW 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="db-model-module">
+<h1>db_model module<a class="headerlink" href="#db-model-module" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="database-model">
+<h2>Database model<a class="headerlink" href="#database-model" title="Permalink to this headline">¶</a></h2>
+<div class="align-center figure align-left" id="id1">
+<a class="reference internal image-reference" href="../_images/modelUML.png"><img alt="ASI.db UML model" src="../_images/modelUML.png" style="width: 542px; height: 344px;" /></a>
+<p class="caption"><span class="caption-text">ASI.db database UML model</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="module-db_model">
+<span id="database-definition"></span><h2>Database definition<a class="headerlink" href="#module-db_model" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="db_model.BaseModel">
+<em class="property">class </em><code class="descclassname">db_model.</code><code class="descname">BaseModel</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#db_model.BaseModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">peewee.Model</span></code></p>
+<p>Class required when using <a class="reference external" href="docs.peewee-orm.com/en/latest/">Peewee ORM</a>.</p>
+<p>Selects database to use.</p>
+<dl class="attribute">
+<dt id="db_model.BaseModel.DoesNotExist">
+<code class="descname">DoesNotExist</code><a class="headerlink" href="#db_model.BaseModel.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">BaseModelDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="db_model.BaseModel.id">
+<code class="descname">id</code><em class="property"> = &lt;peewee.PrimaryKeyField object at 0x101e6a310&gt;</em><a class="headerlink" href="#db_model.BaseModel.id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="db_model.Rol">
+<em class="property">class </em><code class="descclassname">db_model.</code><code class="descname">Rol</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#db_model.Rol" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#db_model.BaseModel" title="db_model.BaseModel"><code class="xref py py-class docutils literal"><span class="pre">db_model.BaseModel</span></code></a></p>
+<p>Rols available for a user.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Rolname:</th><td class="field-body">string &#8211; Work&#8217;s name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Level:</th><td class="field-body">integer &#8211; Work&#8217;s level in USC (User Service Center). From 0 to 3.</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="db_model.Rol.rolname">
+<code class="descname">rolname</code><em class="property"> = &lt;peewee.CharField object at 0x101e6aa90&gt;</em><a class="headerlink" href="#db_model.Rol.rolname" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="db_model.Rol.level">
+<code class="descname">level</code><em class="property"> = &lt;peewee.IntegerField object at 0x101e6ab90&gt;</em><a class="headerlink" href="#db_model.Rol.level" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="db_model.Rol.DoesNotExist">
+<code class="descname">DoesNotExist</code><a class="headerlink" href="#db_model.Rol.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">RolDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="db_model.Rol.names">
+<code class="descname">names</code><a class="headerlink" href="#db_model.Rol.names" title="Permalink to this definition">¶</a></dt>
+<dd><p>Back-reference to expose related objects as a <cite>SelectQuery</cite>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="db_model.User">
+<em class="property">class </em><code class="descclassname">db_model.</code><code class="descname">User</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#db_model.User" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#db_model.BaseModel" title="db_model.BaseModel"><code class="xref py py-class docutils literal"><span class="pre">db_model.BaseModel</span></code></a></p>
+<p>Users registered in USC&#8217;s application.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Username:</th><td class="field-body">string &#8211; User&#8217;s name in the application.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Password:</th><td class="field-body">string &#8211; User&#8217;s password to safely login.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Work:</th><td class="field-body">foreign key(Rol) &#8211; User&#8217;s rol. Reference name: <em>names</em></td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="db_model.User.username">
+<code class="descname">username</code><em class="property"> = &lt;peewee.CharField object at 0x101e6afd0&gt;</em><a class="headerlink" href="#db_model.User.username" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="db_model.User.password">
+<code class="descname">password</code><em class="property"> = &lt;peewee.CharField object at 0x101e73610&gt;</em><a class="headerlink" href="#db_model.User.password" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="db_model.User.work">
+<code class="descname">work</code><em class="property"> = &lt;peewee.ForeignKeyField object at 0x101e7ae50&gt;</em><a class="headerlink" href="#db_model.User.work" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="db_model.User.DoesNotExist">
+<code class="descname">DoesNotExist</code><a class="headerlink" href="#db_model.User.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">UserDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="db_model.User.assigned">
+<code class="descname">assigned</code><a class="headerlink" href="#db_model.User.assigned" title="Permalink to this definition">¶</a></dt>
+<dd><p>Back-reference to expose related objects as a <cite>SelectQuery</cite>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="db_model.User.created">
+<code class="descname">created</code><a class="headerlink" href="#db_model.User.created" title="Permalink to this definition">¶</a></dt>
+<dd><p>Back-reference to expose related objects as a <cite>SelectQuery</cite>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="db_model.User.written">
+<code class="descname">written</code><a class="headerlink" href="#db_model.User.written" title="Permalink to this definition">¶</a></dt>
+<dd><p>Back-reference to expose related objects as a <cite>SelectQuery</cite>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="db_model.Ticket">
+<em class="property">class </em><code class="descclassname">db_model.</code><code class="descname">Ticket</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#db_model.Ticket" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#db_model.BaseModel" title="db_model.BaseModel"><code class="xref py py-class docutils literal"><span class="pre">db_model.BaseModel</span></code></a></p>
+<p>Tickets created.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Id:</th><td class="field-body">unique &#8211; Ticket ID.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">CreateTime:</th><td class="field-body">date time &#8211; Ticket&#8217;s date and time creation.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Description:</th><td class="field-body">text &#8211; Ticket&#8217;s description by creator.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Creator:</th><td class="field-body">foreign key(User) &#8211; User who created the ticket. Reference name: <em>created</em></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Responsible:</th><td class="field-body">foreign key(User) &#8211; User assigned to the ticket. Reference name: <em>assigned</em></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Priority:</th><td class="field-body">string &#8211; Range of values [Crítca, Grave, Alta, Media, Baja]</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">State:</th><td class="field-body">string &#8211; Range of value [Inicio, Asignado, En proceso, Finalizado]</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="db_model.Ticket.id">
+<code class="descname">id</code><em class="property"> = &lt;peewee.PrimaryKeyField object at 0x101e7afd0&gt;</em><a class="headerlink" href="#db_model.Ticket.id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="db_model.Ticket.createTime">
+<code class="descname">createTime</code><em class="property"> = &lt;peewee.DateTimeField object at 0x101f08f10&gt;</em><a class="headerlink" href="#db_model.Ticket.createTime" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="db_model.Ticket.description">
+<code class="descname">description</code><em class="property"> = &lt;peewee.TextField object at 0x101f08f50&gt;</em><a class="headerlink" href="#db_model.Ticket.description" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="db_model.Ticket.creator">
+<code class="descname">creator</code><em class="property"> = &lt;peewee.ForeignKeyField object at 0x101f08f90&gt;</em><a class="headerlink" href="#db_model.Ticket.creator" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="db_model.Ticket.responsible">
+<code class="descname">responsible</code><em class="property"> = &lt;peewee.ForeignKeyField object at 0x101f08fd0&gt;</em><a class="headerlink" href="#db_model.Ticket.responsible" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="db_model.Ticket.priority">
+<code class="descname">priority</code><em class="property"> = &lt;peewee.CharField object at 0x101f0d090&gt;</em><a class="headerlink" href="#db_model.Ticket.priority" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="db_model.Ticket.state">
+<code class="descname">state</code><em class="property"> = &lt;peewee.CharField object at 0x101f0d110&gt;</em><a class="headerlink" href="#db_model.Ticket.state" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="db_model.Ticket.DoesNotExist">
+<code class="descname">DoesNotExist</code><a class="headerlink" href="#db_model.Ticket.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">TicketDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="db_model.Ticket.comments">
+<code class="descname">comments</code><a class="headerlink" href="#db_model.Ticket.comments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Back-reference to expose related objects as a <cite>SelectQuery</cite>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="db_model.Commentary">
+<em class="property">class </em><code class="descclassname">db_model.</code><code class="descname">Commentary</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#db_model.Commentary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#db_model.BaseModel" title="db_model.BaseModel"><code class="xref py py-class docutils literal"><span class="pre">db_model.BaseModel</span></code></a></p>
+<p>Commentary of a ticket.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Id:</th><td class="field-body">unique &#8211; Commentary ID.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Date:</th><td class="field-body">date time &#8211; Commentary&#8217;s date and time redaction.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Text:</th><td class="field-body">text &#8211; Commentary&#8217;s test written by responsible.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Responsible:</th><td class="field-body">foreign key(User) &#8211; User who wrote the commentary. Reference name: <em>written</em></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">IdTicket:</th><td class="field-body">foreign key(Ticket) &#8211; Ticket to which belongs the commentary. Reference name: <em>comments</em></td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="db_model.Commentary.id">
+<code class="descname">id</code><em class="property"> = &lt;peewee.PrimaryKeyField object at 0x101f0d190&gt;</em><a class="headerlink" href="#db_model.Commentary.id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="db_model.Commentary.date">
+<code class="descname">date</code><em class="property"> = &lt;peewee.DateTimeField object at 0x101f0d490&gt;</em><a class="headerlink" href="#db_model.Commentary.date" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="db_model.Commentary.text">
+<code class="descname">text</code><em class="property"> = &lt;peewee.TextField object at 0x101f0d4d0&gt;</em><a class="headerlink" href="#db_model.Commentary.text" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="db_model.Commentary.responsible">
+<code class="descname">responsible</code><em class="property"> = &lt;peewee.ForeignKeyField object at 0x101f0d510&gt;</em><a class="headerlink" href="#db_model.Commentary.responsible" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="db_model.Commentary.idTicket">
+<code class="descname">idTicket</code><em class="property"> = &lt;peewee.ForeignKeyField object at 0x101f0d550&gt;</em><a class="headerlink" href="#db_model.Commentary.idTicket" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="db_model.Commentary.DoesNotExist">
+<code class="descname">DoesNotExist</code><a class="headerlink" href="#db_model.Commentary.DoesNotExist" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal"><span class="pre">CommentaryDoesNotExist</span></code></p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">db_model module</a><ul>
+<li><a class="reference internal" href="#database-model">Database model</a></li>
+<li><a class="reference internal" href="#module-db_model">Database definition</a></li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/_src/db_model.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li><a href="../index.html">Incident Management SW 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2015, Oriol Miro.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3b2.
+    </div>
+  </body>
+</html>

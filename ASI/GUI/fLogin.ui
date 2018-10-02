@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>fLogin</class>
+ <widget class="QMainWindow" name="fLogin">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>602</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Inicio de sesión</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QWidget" name="widgetFields" native="true">
+      <layout class="QFormLayout" name="formLayout">
+       <property name="fieldGrowthPolicy">
+        <enum>QFormLayout::FieldsStayAtSizeHint</enum>
+       </property>
+       <property name="topMargin">
+        <number>150</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="QLabel" name="lbUsername">
+         <property name="text">
+          <string>Usuario</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="lfUsername"/>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="lbPassword">
+         <property name="text">
+          <string>Contraseña</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="lfPassword"/>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="widgetButtons" native="true">
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <property name="bottomMargin">
+        <number>300</number>
+       </property>
+       <item>
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btSignUp">
+         <property name="text">
+          <string>Registrarse</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btLogIn">
+         <property name="text">
+          <string>Aceptar</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+      <zorder>btLogIn</zorder>
+      <zorder>btSignUp</zorder>
+      <zorder>horizontalSpacer</zorder>
+      <zorder>horizontalSpacer_2</zorder>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuLanguage">
+    <property name="title">
+     <string>Idioma</string>
+    </property>
+    <addaction name="actionESP"/>
+    <addaction name="actionCAT"/>
+    <addaction name="actionENG"/>
+    <addaction name="actionCHI"/>
+   </widget>
+   <addaction name="menuLanguage"/>
+  </widget>
+  <action name="actionESP">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Castellano</string>
+   </property>
+  </action>
+  <action name="actionCAT">
+   <property name="text">
+    <string>Catalán</string>
+   </property>
+  </action>
+  <action name="actionENG">
+   <property name="text">
+    <string>Inglés</string>
+   </property>
+  </action>
+  <action name="actionCHI">
+   <property name="text">
+    <string>Chicken</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

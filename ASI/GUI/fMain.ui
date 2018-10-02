@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>fMain</class>
+ <widget class="QMainWindow" name="fMain">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>602</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Gestión de incidencias</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,1">
+    <item>
+     <widget class="QWidget" name="widgetButtons" native="true">
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QPushButton" name="btSearch">
+         <property name="text">
+          <string>Filtrar tickets</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btShowAll">
+         <property name="text">
+          <string>Mostrar todo</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btSignOut">
+         <property name="text">
+          <string>Salir</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="widgetTicket" native="true">
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QWidget" name="widgetTable" native="true">
+         <layout class="QGridLayout" name="gridLayout_2">
+          <property name="margin">
+           <number>0</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QTableView" name="tableTicket">
+            <property name="sortingEnabled">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widgetInfo" native="true">
+         <layout class="QGridLayout" name="gridLayout">
+          <property name="margin">
+           <number>0</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QTextBrowser" name="tfTicketInfo"/>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuLanguage">
+    <property name="title">
+     <string>Idioma</string>
+    </property>
+    <addaction name="actionESP"/>
+    <addaction name="actionCAT"/>
+    <addaction name="actionENG"/>
+    <addaction name="actionCHI"/>
+   </widget>
+   <widget class="QMenu" name="menuExport">
+    <property name="title">
+     <string>Exportar tabla</string>
+    </property>
+    <addaction name="actionCVS"/>
+    <addaction name="actionPDF"/>
+    <addaction name="actionXLS"/>
+   </widget>
+   <addaction name="menuLanguage"/>
+   <addaction name="menuExport"/>
+  </widget>
+  <action name="actionESP">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Castellano</string>
+   </property>
+  </action>
+  <action name="actionCAT">
+   <property name="text">
+    <string>Catalán</string>
+   </property>
+  </action>
+  <action name="actionENG">
+   <property name="text">
+    <string>Inglés</string>
+   </property>
+  </action>
+  <action name="actionCHI">
+   <property name="text">
+    <string>Chicken</string>
+   </property>
+  </action>
+  <action name="actionCVS">
+   <property name="text">
+    <string>A CVS</string>
+   </property>
+  </action>
+  <action name="actionPDF">
+   <property name="text">
+    <string>A PDF</string>
+   </property>
+  </action>
+  <action name="actionXLS">
+   <property name="text">
+    <string>A XLS</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
